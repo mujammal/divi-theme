@@ -37,6 +37,15 @@ html,
     padding: 0 20px 20%;
 }
 
+
+[class*="col-"] {
+        float: left;
+        padding: 20px;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+
+
 .container::before,
 .container::after,
 .row::before,
@@ -61,6 +70,10 @@ html,
 }
 
 
+ 
+
+
+
 /*
 * ==================================================
 * 03. Responsive Mobile design first
@@ -75,21 +88,50 @@ html,
 
 
 
+/* ==================================================
+* 04. Responsive design for desktop
+* ==================================================
+*/
+
+@media only screen and (min-width: 600px) {
+    
+  
+    
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    
+   
+    
+    .col-m-6:nth-child(2n+1) {
+        clear: both;
+    }
+    .col-m-4:nth-child(3n+1) {
+        clear: both;
+    }
+
+} /* end media bracket */
+
+
+
 /*
 * ==================================================
-* 04. Responsive design for desktop
+* 05. Responsive design for desktop
 * ==================================================
 */
 
 @media only screen and (min-width: 768px) {
     
-    [class*="col-"] {
-        display: table;
-        float: left;
-        padding: 20px;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-    }
+   
     
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -103,13 +145,26 @@ html,
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    
+    .col-m-6:nth-child(2n+1) {
+        clear: none;
+    }
+    
+    .col-m-4:nth-child(3n+1) {
+        clear: none;
+    }
+    
+    .col-4:nth-child(3n+1) {
+        clear: both;
+    }
 
 } /* end media bracket */
 
 
+
 /*
 * ==================================================
-* 05. Helping classes
+* 06. Helping classes
 * ==================================================
 */
 
