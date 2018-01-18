@@ -1,0 +1,137 @@
+/*
+* ==================================================
+* 01. Box model
+* ==================================================
+*/
+
+html, body {
+    height: 100%;
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*
+* ==================================================
+* 02. Grid & Structures
+* ==================================================
+*/
+
+.container {
+    width: auto;
+    max-width: none;
+}
+
+.row {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;    
+    padding: 0 20px 20%;
+}
+
+.container::before,
+.container::after,
+.row::before,
+.row::after,
+[class*="col-"]::before,
+[class*="col-"]::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container::after {
+    clear: both;
+}
+
+.row::after {
+    clear: both;
+}
+
+[class*="col-"]::after{
+    clear: both;
+}
+
+
+/*
+* ==================================================
+* 03. Responsive Mobile design first
+* ==================================================
+*/
+
+[class*="col-"] {
+    width: 100%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+
+
+/*
+* ==================================================
+* 04. Responsive design for desktop
+* ==================================================
+*/
+
+@media only screen and (min-width: 768px) {
+    
+    [class*="col-"] {
+        display: table;
+        float: left;
+        padding: 20px;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+} /* end media bracket */
+
+
+/*
+* ==================================================
+* 05. Helping classes
+* ==================================================
+*/
+
+.style1 {
+    background-color: #ffffff !important;
+}
+
+.style2 {
+    background-color: #F7F9FB !important;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.highlight {
+    color: #F52B8A;
+}
+
+
+
+
