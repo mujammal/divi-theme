@@ -613,6 +613,15 @@ nav#nav-content ul li a:hover {
     color: #71818C;
 }
 
+.language-container {
+        overflow: hidden;
+    }
+    
+    .language-container span::before {
+        content: url(../images/language.png);
+        display: inline-block;
+        float: left;
+    }
 
 @media only screen and (min-width: 768px) {
 
@@ -806,7 +815,7 @@ footer .row {
 
 
 hr {
-    border-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.03);
 }
 
 .footer-section-2 {
